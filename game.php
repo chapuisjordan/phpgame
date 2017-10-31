@@ -8,7 +8,7 @@ function displayCase($x, $y)
 }
 function displayObject($x, $y)
 {
-  return"<div style='border:2px solid black; width:56px; height:56px;'><img src='./aveugle.gif' style='width:100%;'></div>";
+  return"<div style='border:2px solid black; width:56px; height:56px;'><img src='img/aveugle.gif' style='width:100%;'></div>";
 }
 ?>
 <!DOCTYPE html>
@@ -49,10 +49,10 @@ function displayObject($x, $y)
           } else {
             if($x == $_SESSION['phpgame']['victory']['x'] && $y == $_SESSION['phpgame']['victory']['y'])
             {
-              echo "<div style='border:1px solid black; width:56px; height:56px;'><img style='width:100%;' src='./lunettes.jpg'></div>";
+              echo "<div style='border:1px solid black; width:56px; height:56px;'><img style='width:100%;' src='img/lunettes.jpg'></div>";
             }else if($x == $_SESSION['phpgame']['loose']['x'] && $y == $_SESSION['phpgame']['loose']['y'])
             {
-              echo "<div style='border:1px solid black; width:56px; height:56px;'><img style='width:100%;' src='./falaise.jpg'></div>";
+              echo "<div style='border:1px solid black; width:56px; height:56px;'><img style='width:100%;' src='img/falaise.jpg'></div>";
             }
             else {
               echo displayCase($x, $y);
@@ -63,11 +63,11 @@ function displayObject($x, $y)
     }
 
     if(($_SESSION['phpgame']['victory']['x'] == $_SESSION['posPlayer']['x']) && ($_SESSION['phpgame']['victory']['y'] == $_SESSION['posPlayer']['y'])) {
-            echo "<img src='victoire.png'>";
+            echo "<img src='img/victoire.png'>";
 
           }
     if(($_SESSION['phpgame']['loose']['x'] == $_SESSION['posPlayer']['x']) && ($_SESSION['phpgame']['loose']['y'] == $_SESSION['posPlayer']['y'])) {
-                echo "<img src='echec.jpg'>";
+                echo "<img src='img/echec.jpg'>";
             }
     ?>
     <form action="./src/reset.php">
